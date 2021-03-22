@@ -5,6 +5,7 @@ import okhttp3.Interceptor;
 import android.content.Context;
 
 import java.io.IOException;
+
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
@@ -16,7 +17,7 @@ public class RetrofitClient {
     private static final String API_KEY = "d72c00ab20a04d9d91dfd909d841de87";
     private static final String BASE_URL = "https://newsapi.org/v2/";
 
-    public static Retrofit newInstance(Context context) {
+    public static Retrofit newInstance() {
         OkHttpClient okHttpClient = new OkHttpClient.Builder()
                 .addInterceptor(new HeaderInterceptor())
                 .build();
