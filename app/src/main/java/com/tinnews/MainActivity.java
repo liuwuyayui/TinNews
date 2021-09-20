@@ -30,7 +30,8 @@ public class MainActivity extends AppCompatActivity {
         NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment);
         navController = navHostFragment.getNavController();
         NavigationUI.setupWithNavController(navigationView, navController);
-        NavigationUI.setupActionBarWithNavController(this, navController);
+//        NavigationUI.setupActionBarWithNavController(this, navController);
+        NewsApi api = RetrofitClient.newInstance(this).create(NewsApi.class);
 
     }
 
